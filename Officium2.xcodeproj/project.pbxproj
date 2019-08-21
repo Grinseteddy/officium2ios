@@ -14,6 +14,8 @@
 		94885696230D7F7100B61A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94885694230D7F7100B61A48 /* LaunchScreen.storyboard */; };
 		948856A1230D7F7100B61A48 /* Officium2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856A0230D7F7100B61A48 /* Officium2Tests.swift */; };
 		948856AC230D7F7100B61A48 /* Officium2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856AB230D7F7100B61A48 /* Officium2UITests.swift */; };
+		948856BA230D84A100B61A48 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856B9230D84A100B61A48 /* LoginController.swift */; };
+		948856BD230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		948856A7230D7F7100B61A48 /* Officium2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Officium2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		948856AB230D7F7100B61A48 /* Officium2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Officium2UITests.swift; sourceTree = "<group>"; };
 		948856AD230D7F7100B61A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948856B9230D84A100B61A48 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,11 @@
 		9488568A230D7F6D00B61A48 /* Officium2 */ = {
 			isa = PBXGroup;
 			children = (
+				948856BE230D91CE00B61A48 /* UIFiles */,
+				948856BB230D84AC00B61A48 /* Controllers */,
 				9488568B230D7F6D00B61A48 /* AppDelegate.swift */,
 				9488568D230D7F6D00B61A48 /* ViewController.swift */,
-				9488568F230D7F6D00B61A48 /* Main.storyboard */,
 				94885692230D7F7100B61A48 /* Assets.xcassets */,
-				94885694230D7F7100B61A48 /* LaunchScreen.storyboard */,
 				94885697230D7F7100B61A48 /* Info.plist */,
 			);
 			path = Officium2;
@@ -123,6 +127,24 @@
 				948856AD230D7F7100B61A48 /* Info.plist */,
 			);
 			path = Officium2UITests;
+			sourceTree = "<group>";
+		};
+		948856BB230D84AC00B61A48 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				948856B9230D84A100B61A48 /* LoginController.swift */,
+				948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		948856BE230D91CE00B61A48 /* UIFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9488568F230D7F6D00B61A48 /* Main.storyboard */,
+				94885694230D7F7100B61A48 /* LaunchScreen.storyboard */,
+			);
+			path = UIFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +279,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9488568E230D7F6D00B61A48 /* ViewController.swift in Sources */,
+				948856BA230D84A100B61A48 /* LoginController.swift in Sources */,
 				9488568C230D7F6D00B61A48 /* AppDelegate.swift in Sources */,
+				948856BD230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
