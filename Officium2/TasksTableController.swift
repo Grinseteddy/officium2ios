@@ -9,12 +9,19 @@
 import UIKit
 
 class TasksTableController: UITableViewController {
-    
+
     var project: ProjectModel=ProjectModel()
+    var tasks: TasksModel=TasksModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tasks.loaded=false
+        tasks.load(projectId: project.id)
+        while (!tasks.loaded) {
+            sleep(1)
+        }
 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,23 +33,33 @@ class TasksTableController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if (tasks.loaded) {
+            return tasks.tasks.count
+        }
+        tasks.load(projectId: project.id)
+        while (!tasks.loaded) {
+            sleep(1)
+        }
+        return tasks.tasks.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTask", for: indexPath) as! SingleTaskCell
 
         // Configure the cell...
+        
+        //ToDo calcluate progress
+        //ToDo Select user picture
+        
+        cell.dueDate.text=tasks.tasks[indexPath.row].duedate
+        cell.taskName.text=tasks.tasks[indexPath.row].name
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
