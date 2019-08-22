@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct projects {
+    
+}
+
 class ProjectsControllerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -26,23 +30,33 @@ class ProjectsControllerTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleProjectCell", for: indexPath) as! SingleProjectTableViewCell
 
-        // Configure the cell...
+        cell.projectName.text="Project initializing"
+        cell.progressBar.progress=0.2
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+    
+    override open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72.0
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

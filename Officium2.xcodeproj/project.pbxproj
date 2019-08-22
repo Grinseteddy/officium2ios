@@ -16,6 +16,7 @@
 		948856AC230D7F7100B61A48 /* Officium2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856AB230D7F7100B61A48 /* Officium2UITests.swift */; };
 		948856BA230D84A100B61A48 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856B9230D84A100B61A48 /* LoginController.swift */; };
 		948856BD230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */; };
+		94A2FB69230E7AC800F43BAB /* SingleProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB68230E7AC800F43BAB /* SingleProjectTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		948856AD230D7F7100B61A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948856B9230D84A100B61A48 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsControllerTableViewController.swift; sourceTree = "<group>"; };
+		94A2FB68230E7AC800F43BAB /* SingleProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		9488568A230D7F6D00B61A48 /* Officium2 */ = {
 			isa = PBXGroup;
 			children = (
+				94A2FB6A230E841800F43BAB /* DataModels */,
 				948856BE230D91CE00B61A48 /* UIFiles */,
 				948856BB230D84AC00B61A48 /* Controllers */,
 				9488568B230D7F6D00B61A48 /* AppDelegate.swift */,
@@ -134,6 +137,7 @@
 			children = (
 				948856B9230D84A100B61A48 /* LoginController.swift */,
 				948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */,
+				94A2FB68230E7AC800F43BAB /* SingleProjectTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +149,13 @@
 				94885694230D7F7100B61A48 /* LaunchScreen.storyboard */,
 			);
 			path = UIFiles;
+			sourceTree = "<group>";
+		};
+		94A2FB6A230E841800F43BAB /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			files = (
 				9488568E230D7F6D00B61A48 /* ViewController.swift in Sources */,
 				948856BA230D84A100B61A48 /* LoginController.swift in Sources */,
+				94A2FB69230E7AC800F43BAB /* SingleProjectTableViewCell.swift in Sources */,
 				9488568C230D7F6D00B61A48 /* AppDelegate.swift in Sources */,
 				948856BD230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift in Sources */,
 			);
