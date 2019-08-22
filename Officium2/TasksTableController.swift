@@ -47,7 +47,7 @@ class TasksTableController: UITableViewController {
         return tasks.tasks.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    /*override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTask", for: indexPath) as! SingleTaskCell
 
         // Configure the cell...
@@ -59,7 +59,7 @@ class TasksTableController: UITableViewController {
         cell.taskName.text=tasks.tasks[indexPath.row].name
 
         return cell
-    }
+    }*/
 
     /*
     // Override to support conditional editing of the table view.

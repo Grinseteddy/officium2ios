@@ -45,7 +45,7 @@ class ProjectsControllerTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showTasks" {
+        if segue.identifier == "showTasksOfProject" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let project: ProjectModel
                 project=projects.projects[indexPath.row]

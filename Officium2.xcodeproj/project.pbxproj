@@ -21,7 +21,6 @@
 		94A2FB70230E885700F43BAB /* ProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6F230E885700F43BAB /* ProjectsModel.swift */; };
 		94A2FB73230E88CD00F43BAB /* ApplicationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */; };
 		94A2FB75230EA8B900F43BAB /* TasksTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB74230EA8B900F43BAB /* TasksTableController.swift */; };
-		94A2FB77230ECBE100F43BAB /* SingleTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB76230ECBE100F43BAB /* SingleTaskCell.swift */; };
 		94A2FB79230ECEA100F43BAB /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB78230ECEA100F43BAB /* TaskModel.swift */; };
 		94A2FB7B230ECED200F43BAB /* TasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB7A230ECED200F43BAB /* TasksModel.swift */; };
 /* End PBXBuildFile section */
@@ -64,7 +63,6 @@
 		94A2FB6F230E885700F43BAB /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
 		94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettings.swift; sourceTree = "<group>"; };
 		94A2FB74230EA8B900F43BAB /* TasksTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableController.swift; sourceTree = "<group>"; };
-		94A2FB76230ECBE100F43BAB /* SingleTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTaskCell.swift; sourceTree = "<group>"; };
 		94A2FB78230ECEA100F43BAB /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		94A2FB7A230ECED200F43BAB /* TasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,7 +152,6 @@
 				948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */,
 				94A2FB68230E7AC800F43BAB /* SingleProjectTableViewCell.swift */,
 				94A2FB74230EA8B900F43BAB /* TasksTableController.swift */,
-				94A2FB76230ECBE100F43BAB /* SingleTaskCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -331,7 +328,6 @@
 				94A2FB79230ECEA100F43BAB /* TaskModel.swift in Sources */,
 				94A2FB69230E7AC800F43BAB /* SingleProjectTableViewCell.swift in Sources */,
 				9488568C230D7F6D00B61A48 /* AppDelegate.swift in Sources */,
-				94A2FB77230ECBE100F43BAB /* SingleTaskCell.swift in Sources */,
 				94A2FB75230EA8B900F43BAB /* TasksTableController.swift in Sources */,
 				948856BD230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift in Sources */,
 				94A2FB6E230E881100F43BAB /* ProjectModel.swift in Sources */,
