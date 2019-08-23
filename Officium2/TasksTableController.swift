@@ -14,10 +14,10 @@ class TasksTableController: UITableViewController {
     var tasks: TasksModel=TasksModel()
 
     override func viewDidLoad() {
-       
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SingleTaskCell")
+
         
         super.viewDidLoad()
+        self.registerTableViewCells()
         
         tasks.loaded=false
         tasks.load(projectId: project.id)
@@ -33,7 +33,10 @@ class TasksTableController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
+    func registerTableViewCells() {
+        let singleTaskCell=UINib(nibName: "SingleTaskCell", bundle: nil)
+        self.tableView.register(singleTaskCell, forCellReuseIdentifier: "SingleTaskCell")
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -53,18 +56,23 @@ class TasksTableController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTaskCell", for: indexPath) /*as! SingleTaskCell*/
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTaskCell", for: indexPath) as! SingleTaskCell
 
         // Configure the cell...
         
         //ToDo calcluate progress
         //ToDo Select user picture
         
-        //cell.dueDate.text=tasks.tasks[indexPath.row].duedate
-        //cell.taskName.text=tasks.tasks[indexPath.row].name
         
-        cell.textLabel?.text=tasks.tasks[indexPath.row].name
-
+        
+        /*if ((tasks.tasks[indexPath.row].duedate) != nil) {
+            cell.dueDateLable.text=tasks.tasks[indexPath.row].duedate
+        }*/
+        
+        //cell.taskProgressBar.progress = 0.2
+        
+        cell.taskNameLabel.text=tasks.tasks[indexPath.row].name
+        
         return cell
     }
 
