@@ -14,7 +14,11 @@ class TasksTableController: UITableViewController {
     var tasks: TasksModel=TasksModel()
 
     override func viewDidLoad() {
+       
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SingleTaskCell")
+        
         super.viewDidLoad()
+        
         tasks.loaded=false
         tasks.load(projectId: project.id)
         while (!tasks.loaded) {
@@ -47,19 +51,22 @@ class TasksTableController: UITableViewController {
         return tasks.tasks.count
     }
 
-    /*override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTask", for: indexPath) as! SingleTaskCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTaskCell", for: indexPath) /*as! SingleTaskCell*/
 
         // Configure the cell...
         
         //ToDo calcluate progress
         //ToDo Select user picture
         
-        cell.dueDate.text=tasks.tasks[indexPath.row].duedate
-        cell.taskName.text=tasks.tasks[indexPath.row].name
+        //cell.dueDate.text=tasks.tasks[indexPath.row].duedate
+        //cell.taskName.text=tasks.tasks[indexPath.row].name
+        
+        cell.textLabel?.text=tasks.tasks[indexPath.row].name
 
         return cell
-    }*/
+    }
 
     /*
     // Override to support conditional editing of the table view.

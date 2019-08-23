@@ -198,6 +198,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" hint="This is a single task" identifier="SingleTaskCell" label="SingleTaskCell"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
