@@ -13,18 +13,26 @@ class DayProgressView: UIProgressView {
     var startDate: String = "2019-01-01"
     var endDate: String = "2019-12-31"
     
-    override func awakeFromNib() {
+    func calculateProgress() {
         let progress: Float = OfficiumUtilities.CalculateProgress(StartDate: startDate, EndDate: endDate)
-        if progress>0.5 && progress<=0.8 {
+        self.progress=progress
+    }
+    
+    func setTint() {
+        if self.progress>0.5 && self.progress<=0.8 {
             self.tintColor = .green
-        } else if progress>0.8 && progress<=0.9{
+        } else if self.progress>0.8 && self.progress<=0.9{
             self.tintColor = .yellow
-        } else if progress>0.9 {
+        } else if self.progress>0.9 {
             self.tintColor = .red
         } else {
             self.tintColor = .blue
         }
-        self.progress=progress
+    }
+    
+    override func awakeFromNib() {
+        calculateProgress()
+        setTint()
     }
 
     /*

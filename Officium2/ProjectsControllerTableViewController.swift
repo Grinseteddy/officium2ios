@@ -16,6 +16,7 @@ class ProjectsControllerTableViewController: UITableViewController {
     override func viewDidLoad() {
         projects.load()
         super.viewDidLoad()
+        self.registerTableViewCells()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,6 +25,17 @@ class ProjectsControllerTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.title="Projects"
+    }
+    
+    func registerTableViewCells() {
+        let cell=SingleProjectCell()
+        if (!projects.loaded) {
+            projects.load()
+        }
+        while (!projects.loaded) {
+            sleep(1)
+        }
+        self.tableView.register(SingleProjectCell.self, forCellReuseIdentifier: "SingleProjectCell")
     }
 
     // MARK: - Table view data source
@@ -61,15 +73,9 @@ class ProjectsControllerTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleProjectCell", for: indexPath) as! SingleProjectTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleProjectCell", for: indexPath) as! SingleProjectCell
 
-        cell.projectName.text=projects.projects[indexPath.row].name
-        
-        let progressBar: DayProgressView = cell.progressBar as! DayProgressView;
-        
-        progressBar.startDate=projects.projects[indexPath.row].createdAt!;
-        progressBar.endDate=projects.projects[indexPath.row].dueDate!;
-        progressBar.awakeFromNib()
+        cell.project=projects.projects[indexPath.row]
         
         //ToDo add icon to project
         //ToDo show icon
