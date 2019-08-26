@@ -53,10 +53,26 @@ class TasksTableController: UITableViewController {
         }
         return tasks.tasks.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTaskCell", for: indexPath) as! SingleTaskCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTaskCell", for: indexPath) as? SingleTaskCell {
+            
+            cell.taskNameLabel.text=tasks.tasks[indexPath.row].name
+            cell.dueDateLabel.text=tasks.tasks[indexPath.row].duedate
+            
+            let progressBar: DayProgressView = cell.progressBar as! DayProgressView
+            
+            progressBar.startDate=tasks.tasks[indexPath.row].createdAt!
+            progressBar.endDate=tasks.tasks[indexPath.row].duedate!
+            progressBar.awakeFromNib()
+            
+            return cell
+        }
 
         // Configure the cell...
         
@@ -70,10 +86,8 @@ class TasksTableController: UITableViewController {
         }*/
         
         //cell.taskProgressBar.progress = 0.2
+        return UITableViewCell()
         
-        cell.taskNameLabel.text=tasks.tasks[indexPath.row].name
-        
-        return cell
     }
 
     /*

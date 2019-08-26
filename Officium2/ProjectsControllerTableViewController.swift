@@ -65,13 +65,14 @@ class ProjectsControllerTableViewController: UITableViewController {
 
         cell.projectName.text=projects.projects[indexPath.row].name
         
-        //ToDo add due date to project model
-        //ToDo calculate time for project
+        let progressBar: DayProgressView = cell.progressBar as! DayProgressView;
+        
+        progressBar.startDate=projects.projects[indexPath.row].createdAt!;
+        progressBar.endDate=projects.projects[indexPath.row].dueDate!;
+        progressBar.awakeFromNib()
         
         //ToDo add icon to project
         //ToDo show icon
-        
-        cell.progressBar.progress=0.2
 
         return cell
     }

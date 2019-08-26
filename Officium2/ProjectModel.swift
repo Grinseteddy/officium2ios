@@ -18,9 +18,11 @@ class ProjectModel : Codable {
     var createdBy: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa"
     var updatedAt: String?="2019-08-19T15:06"
     var updatedBy: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa"
+    var dueDate: String?="2020-12-31"
     var thread: String?=nil
     
-    init(id: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa", name: String="Just a default name", team: String?="team", createdAt: String?="2019-08-19T15:06", createdBy: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa", updatedAt: String?="2019-08-19T15:06", updatedBy: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa", thread: String? = nil) {
+    init(id: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa", name: String="Just a default name", team: String?="team", createdAt: String?="2019-08-19T15:06", createdBy: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa", updatedAt: String?="2019-08-19T15:06", updatedBy:
+        String="sampleGU-IDsa-mple-GUID-sampleGUIDsa", dueDate: String? = "2020-12-31", thread: String? = nil) {
         self.id=id
         self.name=name
         self.team=team
@@ -28,6 +30,7 @@ class ProjectModel : Codable {
         self.createdBy=createdBy
         self.updatedAt=updatedAt
         self.updatedBy=updatedBy
+        self.dueDate=dueDate
         self.thread=thread
     }
 }

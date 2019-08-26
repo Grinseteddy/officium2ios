@@ -18,6 +18,8 @@
 		948856AC230D7F7100B61A48 /* Officium2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856AB230D7F7100B61A48 /* Officium2UITests.swift */; };
 		948856BA230D84A100B61A48 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856B9230D84A100B61A48 /* LoginController.swift */; };
 		948856BD230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */; };
+		9488F55123100A6100C40DD7 /* OfficiumUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F55023100A6100C40DD7 /* OfficiumUtilities.swift */; };
+		9488F5532313BB0A00C40DD7 /* DayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F5522313BB0A00C40DD7 /* DayProgressView.swift */; };
 		94A2FB69230E7AC800F43BAB /* SingleProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB68230E7AC800F43BAB /* SingleProjectTableViewCell.swift */; };
 		94A2FB6E230E881100F43BAB /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6D230E881100F43BAB /* ProjectModel.swift */; };
 		94A2FB70230E885700F43BAB /* ProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6F230E885700F43BAB /* ProjectsModel.swift */; };
@@ -62,6 +64,8 @@
 		948856AD230D7F7100B61A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948856B9230D84A100B61A48 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsControllerTableViewController.swift; sourceTree = "<group>"; };
+		9488F55023100A6100C40DD7 /* OfficiumUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficiumUtilities.swift; sourceTree = "<group>"; };
+		9488F5522313BB0A00C40DD7 /* DayProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayProgressView.swift; sourceTree = "<group>"; };
 		94A2FB68230E7AC800F43BAB /* SingleProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectTableViewCell.swift; sourceTree = "<group>"; };
 		94A2FB6D230E881100F43BAB /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		94A2FB6F230E885700F43BAB /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 			children = (
 				9488568A230D7F6D00B61A48 /* Officium2 */,
 				9488569F230D7F7100B61A48 /* Officium2Tests */,
-				948856AA230D7F7100B61A48 /* Officium2UITests */,
 				94885689230D7F6D00B61A48 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 		9488568A230D7F6D00B61A48 /* Officium2 */ = {
 			isa = PBXGroup;
 			children = (
+				9488F54F23100A3500C40DD7 /* Utilities */,
 				94A2FB71230E889500F43BAB /* ApplicationSettings */,
 				94A2FB6A230E841800F43BAB /* DataModels */,
 				948856BE230D91CE00B61A48 /* UIFiles */,
@@ -136,6 +140,7 @@
 			children = (
 				948856A0230D7F7100B61A48 /* Officium2Tests.swift */,
 				948856A2230D7F7100B61A48 /* Info.plist */,
+				948856AA230D7F7100B61A48 /* Officium2UITests */,
 			);
 			path = Officium2Tests;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				94A2FB68230E7AC800F43BAB /* SingleProjectTableViewCell.swift */,
 				94A2FB74230EA8B900F43BAB /* TasksTableController.swift */,
 				945AFCD5230FE61500934B05 /* SingleTaskCell.swift */,
+				9488F5522313BB0A00C40DD7 /* DayProgressView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +175,14 @@
 				94885694230D7F7100B61A48 /* LaunchScreen.storyboard */,
 			);
 			path = UIFiles;
+			sourceTree = "<group>";
+		};
+		9488F54F23100A3500C40DD7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9488F55023100A6100C40DD7 /* OfficiumUtilities.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		94A2FB6A230E841800F43BAB /* DataModels */ = {
@@ -327,7 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9488F5532313BB0A00C40DD7 /* DayProgressView.swift in Sources */,
 				9488568E230D7F6D00B61A48 /* ViewController.swift in Sources */,
+				9488F55123100A6100C40DD7 /* OfficiumUtilities.swift in Sources */,
 				94A2FB73230E88CD00F43BAB /* ApplicationSettings.swift in Sources */,
 				94A2FB7B230ECED200F43BAB /* TasksModel.swift in Sources */,
 				948856BA230D84A100B61A48 /* LoginController.swift in Sources */,

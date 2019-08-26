@@ -10,11 +10,19 @@ import UIKit
 
 class SingleTaskCell: UITableViewCell {
 
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    @IBOutlet weak var dueDateLabel: UILabel!
+    
     @IBOutlet weak var taskNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        dueDateLabel.text="Due Date"
+        taskNameLabel.text="Task Name"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
