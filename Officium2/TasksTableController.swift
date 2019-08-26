@@ -18,6 +18,7 @@ class TasksTableController: UITableViewController {
         
         super.viewDidLoad()
         self.registerTableViewCells()
+        self.setUpNavication();
         
         tasks.loaded=false
         tasks.load(projectId: project.id)
@@ -31,6 +32,10 @@ class TasksTableController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func setUpNavication() {
+        navigationItem.backBarButtonItem?.isEnabled=true
     }
 
     func registerTableViewCells() {
@@ -55,7 +60,7 @@ class TasksTableController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 85
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
