@@ -42,6 +42,9 @@ class SingleProjectCell: UITableViewCell {
             projectProgress.endDate=project!.dueDate!
             projectProgress.calculateProgress()
             projectProgress.awakeFromNib()
+            
+            projectIcon.backgroundColor = .white
+            projectIcon.isOpaque = false
         }
         
     }
