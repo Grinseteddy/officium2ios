@@ -11,11 +11,13 @@ import UIKit
 class SingleTaskCell: UITableViewCell {
 
     
-    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progressBar: DayProgressView!
     
     @IBOutlet weak var dueDateLabel: UILabel!
     
     @IBOutlet weak var taskNameLabel: UILabel!
+    
+    var task: TaskModel=TaskModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +31,16 @@ class SingleTaskCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setContent() {
+        progressBar.startDate=self.task.createdAt!
+        progressBar.endDate=self.task.duedate!
+        progressBar.calculateProgress()
+        progressBar.awakeFromNib()
+        dueDateLabel.text=self.task.duedate
+        taskNameLabel.text=self.task.name
+        
     }
     
 }

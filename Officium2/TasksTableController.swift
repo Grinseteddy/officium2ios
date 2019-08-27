@@ -67,30 +67,12 @@ class TasksTableController: UITableViewController {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTaskCell", for: indexPath) as? SingleTaskCell {
             
-            cell.taskNameLabel.text=tasks.tasks[indexPath.row].name
-            cell.dueDateLabel.text=tasks.tasks[indexPath.row].duedate
-            
-            let progressBar: DayProgressView = cell.progressBar as! DayProgressView
-            
-            progressBar.startDate=tasks.tasks[indexPath.row].createdAt!
-            progressBar.endDate=tasks.tasks[indexPath.row].duedate!
-            progressBar.awakeFromNib()
+            cell.task=tasks.tasks[indexPath.row]
+            cell.setContent()
             
             return cell
         }
 
-        // Configure the cell...
-        
-        //ToDo calcluate progress
-        //ToDo Select user picture
-        
-        
-        
-        /*if ((tasks.tasks[indexPath.row].duedate) != nil) {
-            cell.dueDateLable.text=tasks.tasks[indexPath.row].duedate
-        }*/
-        
-        //cell.taskProgressBar.progress = 0.2
         return UITableViewCell()
         
     }

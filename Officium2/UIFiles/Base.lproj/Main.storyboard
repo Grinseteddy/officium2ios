@@ -130,7 +130,7 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" hint="This is a single project to be selected" identifier="SingleProjectCell" label="SingleProjectCell"/>
                                 <connections>
-                                    <segue destination="iHW-TK-UFJ" kind="showDetail" identifier="showTasksOfProject" id="fUt-oI-Tjw"/>
+                                    <segue destination="iHW-TK-UFJ" kind="showDetail" identifier="showTasksOfProject" id="RXc-CE-O18"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -154,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Ool-gm-4lp" customClass="SingleTaskCell" customModule="Officium2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleTaskCell" rowHeight="80" id="Ool-gm-4lp" customClass="SingleTaskCell" customModule="Officium2">
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ool-gm-4lp" id="CFs-oz-8ty">
@@ -215,7 +215,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fUt-oI-Tjw"/>
+        <segue reference="RXc-CE-O18"/>
         <segue reference="SD1-4Y-4GQ"/>
     </inferredMetricsTieBreakers>
 </document>

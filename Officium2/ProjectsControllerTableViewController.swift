@@ -28,14 +28,16 @@ class ProjectsControllerTableViewController: UITableViewController {
     }
     
     func registerTableViewCells() {
-        let cell=SingleProjectCell()
         if (!projects.loaded) {
             projects.load()
         }
         while (!projects.loaded) {
             sleep(1)
         }
-        self.tableView.register(SingleProjectCell.self, forCellReuseIdentifier: "SingleProjectCell")
+        
+        let singleTaskCell=UINib(nibName: "SingleProjectCell", bundle: nil)
+        self.tableView.register(singleTaskCell, forCellReuseIdentifier: "SingleProjectCell")
+        
     }
 
     // MARK: - Table view data source
@@ -54,6 +56,10 @@ class ProjectsControllerTableViewController: UITableViewController {
             sleep(1)
         }
         return projects.projects.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showTasksOfProject", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,9 +82,7 @@ class ProjectsControllerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SingleProjectCell", for: indexPath) as! SingleProjectCell
 
         cell.project=projects.projects[indexPath.row]
-        
-        //ToDo add icon to project
-        //ToDo show icon
+        cell.setContent()
 
         return cell
     }
@@ -86,6 +90,8 @@ class ProjectsControllerTableViewController: UITableViewController {
     /*override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section \(section)"
     }*/
+    
+    
     
     override open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 72.0

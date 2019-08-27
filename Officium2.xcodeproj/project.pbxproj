@@ -21,6 +21,7 @@
 		9488F55123100A6100C40DD7 /* OfficiumUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F55023100A6100C40DD7 /* OfficiumUtilities.swift */; };
 		9488F5532313BB0A00C40DD7 /* DayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F5522313BB0A00C40DD7 /* DayProgressView.swift */; };
 		9488F5582313F74100C40DD7 /* SingleProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F5572313F74100C40DD7 /* SingleProjectCell.swift */; };
+		9488F55C2314189E00C40DD7 /* SingleProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9488F55B2314189E00C40DD7 /* SingleProjectCell.xib */; };
 		94A2FB6E230E881100F43BAB /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6D230E881100F43BAB /* ProjectModel.swift */; };
 		94A2FB70230E885700F43BAB /* ProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6F230E885700F43BAB /* ProjectsModel.swift */; };
 		94A2FB73230E88CD00F43BAB /* ApplicationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */; };
@@ -67,6 +68,7 @@
 		9488F55023100A6100C40DD7 /* OfficiumUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficiumUtilities.swift; sourceTree = "<group>"; };
 		9488F5522313BB0A00C40DD7 /* DayProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayProgressView.swift; sourceTree = "<group>"; };
 		9488F5572313F74100C40DD7 /* SingleProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectCell.swift; sourceTree = "<group>"; };
+		9488F55B2314189E00C40DD7 /* SingleProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleProjectCell.xib; sourceTree = "<group>"; };
 		94A2FB6D230E881100F43BAB /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		94A2FB6F230E885700F43BAB /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
 		94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettings.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				945AFCD6230FE61500934B05 /* SingleTaskCell.xib */,
 				9488568F230D7F6D00B61A48 /* Main.storyboard */,
 				94885694230D7F7100B61A48 /* LaunchScreen.storyboard */,
+				9488F55B2314189E00C40DD7 /* SingleProjectCell.xib */,
 			);
 			path = UIFiles;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				94885696230D7F7100B61A48 /* LaunchScreen.storyboard in Resources */,
 				94885693230D7F7100B61A48 /* Assets.xcassets in Resources */,
 				94885691230D7F6D00B61A48 /* Main.storyboard in Resources */,
+				9488F55C2314189E00C40DD7 /* SingleProjectCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
