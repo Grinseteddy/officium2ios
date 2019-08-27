@@ -22,6 +22,7 @@
 		9488F5532313BB0A00C40DD7 /* DayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F5522313BB0A00C40DD7 /* DayProgressView.swift */; };
 		9488F5582313F74100C40DD7 /* SingleProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F5572313F74100C40DD7 /* SingleProjectCell.swift */; };
 		9488F55C2314189E00C40DD7 /* SingleProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9488F55B2314189E00C40DD7 /* SingleProjectCell.xib */; };
+		9488F55E231541D800C40DD7 /* SingleTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F55D231541D800C40DD7 /* SingleTaskViewController.swift */; };
 		94A2FB6E230E881100F43BAB /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6D230E881100F43BAB /* ProjectModel.swift */; };
 		94A2FB70230E885700F43BAB /* ProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6F230E885700F43BAB /* ProjectsModel.swift */; };
 		94A2FB73230E88CD00F43BAB /* ApplicationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */; };
@@ -69,6 +70,7 @@
 		9488F5522313BB0A00C40DD7 /* DayProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayProgressView.swift; sourceTree = "<group>"; };
 		9488F5572313F74100C40DD7 /* SingleProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectCell.swift; sourceTree = "<group>"; };
 		9488F55B2314189E00C40DD7 /* SingleProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleProjectCell.xib; sourceTree = "<group>"; };
+		9488F55D231541D800C40DD7 /* SingleTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTaskViewController.swift; sourceTree = "<group>"; };
 		94A2FB6D230E881100F43BAB /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		94A2FB6F230E885700F43BAB /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
 		94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettings.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				948856B9230D84A100B61A48 /* LoginController.swift */,
 				948856BC230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift */,
 				94A2FB74230EA8B900F43BAB /* TasksTableController.swift */,
+				9488F55D231541D800C40DD7 /* SingleTaskViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				9488568E230D7F6D00B61A48 /* ViewController.swift in Sources */,
 				9488F55123100A6100C40DD7 /* OfficiumUtilities.swift in Sources */,
 				94A2FB73230E88CD00F43BAB /* ApplicationSettings.swift in Sources */,
+				9488F55E231541D800C40DD7 /* SingleTaskViewController.swift in Sources */,
 				94A2FB7B230ECED200F43BAB /* TasksModel.swift in Sources */,
 				948856BA230D84A100B61A48 /* LoginController.swift in Sources */,
 				94A2FB70230E885700F43BAB /* ProjectsModel.swift in Sources */,

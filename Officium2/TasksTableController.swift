@@ -112,14 +112,35 @@ class TasksTableController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showSingleTask", sender: self)
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSingleTask" {
+           if let indexPath = tableView.indexPathForSelectedRow {
+                let task: TaskModel = tasks.tasks[indexPath.row]
+                    /*let controller = (segue.destination as! UINavigationController).topViewController as! SingleTaskViewController
+                    controller.title = task.name
+                    controller.task=task
+                controller.navigationItem.leftItemsSupplementBackButton=true*/
+            
+                let controller=segue.destination as! SingleTaskViewController
+                controller.task = task
+                controller.project=self.project
+                controller.setContent()
+                controller.navigationItem.leftItemsSupplementBackButton=true
+            
+
+            }
+        }
+        
+        
+        
+    }
+ 
 
 }
