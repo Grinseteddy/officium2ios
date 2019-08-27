@@ -16,6 +16,8 @@ class TasksModel {
     
     var loaded: Bool=false
     
+    var sortedByStatus: [StatusModel] = [StatusModel]()
+    
     init () {
         loaded=false
     }
@@ -41,5 +43,26 @@ class TasksModel {
                 }
             } .resume()
         }
+    }
+    
+    func sortTasksByStatus() {
+        if (!loaded) {
+            return
+        }
+        let staticModel: StatusModel = StatusModel()
+        
+        for status in staticModel.model {
+            let model: StatusModel = StatusModel()
+            for task in tasks {
+                if task.status == status {
+                    model.key=status
+                    model.tasks.append(task)
+                }
+            }
+            if model.tasks.count != 0 {
+                sortedByStatus.append(model)
+            }
+        }
+
     }
 }

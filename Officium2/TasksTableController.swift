@@ -12,7 +12,8 @@ class TasksTableController: UITableViewController {
 
     var project: ProjectModel=ProjectModel()
     var tasks: TasksModel=TasksModel()
-
+    
+    
     override func viewDidLoad() {
 
         
@@ -25,7 +26,8 @@ class TasksTableController: UITableViewController {
         while (!tasks.loaded) {
             sleep(1)
         }
-
+        
+        tasks.sortTasksByStatus()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -42,21 +44,28 @@ class TasksTableController: UITableViewController {
         let singleTaskCell=UINib(nibName: "SingleTaskCell", bundle: nil)
         self.tableView.register(singleTaskCell, forCellReuseIdentifier: "SingleTaskCell")
     }
+    
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return self.tasks.sortedByStatus.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let section = self.tasks.sortedByStatus[section]
+        return section.key
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tasks.loaded) {
-            return tasks.tasks.count
+            return tasks.sortedByStatus[section].tasks.count
         }
         tasks.load(projectId: project.id)
         while (!tasks.loaded) {
             sleep(1)
         }
-        return tasks.tasks.count
+        return tasks.sortedByStatus[section].tasks.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,7 +76,10 @@ class TasksTableController: UITableViewController {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SingleTaskCell", for: indexPath) as? SingleTaskCell {
             
-            cell.task=tasks.tasks[indexPath.row]
+            let section = self.tasks.sortedByStatus[indexPath.section]
+            let task = section.tasks[indexPath.row]
+            
+            cell.task=task
             cell.setContent()
             
             return cell
@@ -122,11 +134,7 @@ class TasksTableController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSingleTask" {
            if let indexPath = tableView.indexPathForSelectedRow {
-                let task: TaskModel = tasks.tasks[indexPath.row]
-                    /*let controller = (segue.destination as! UINavigationController).topViewController as! SingleTaskViewController
-                    controller.title = task.name
-                    controller.task=task
-                controller.navigationItem.leftItemsSupplementBackButton=true*/
+                let task: TaskModel = tasks.sortedByStatus[indexPath.section].tasks[indexPath.row]
             
                 let controller=segue.destination as! SingleTaskViewController
                 controller.task = task
@@ -137,10 +145,5 @@ class TasksTableController: UITableViewController {
 
             }
         }
-        
-        
-        
     }
- 
-
-}
+ }
