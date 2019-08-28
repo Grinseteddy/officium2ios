@@ -13,6 +13,11 @@ class TasksTableController: UITableViewController {
     var project: ProjectModel=ProjectModel()
     var tasks: TasksModel=TasksModel()
     
+    let backgroundColorsForSection: [UIColor] = [UIColor.gray, UIColor.gray, #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), UIColor.gray]
+    
+    let tintColorForSection: [UIColor] = [UIColor.darkGray, UIColor.white, UIColor.white, UIColor.white, UIColor.white, UIColor.darkGray]
+    
+    var collapsedForSection: [Bool] = [false, false, false, false, false, false]
     
     override func viewDidLoad() {
 
@@ -52,18 +57,41 @@ class TasksTableController: UITableViewController {
         return self.tasks.sortedByStatus.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    /*override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let section = self.tasks.sortedByStatus[section]
         return section.key
+    }*/
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let sectionHeaderView = TaskOverviewSectionHeaderView()
+        sectionHeaderView.sectionHeaderLabel.text = tasks.sortedByStatus[section].key
+        sectionHeaderView.backgroundColor=backgroundColorsForSection[section]
+        sectionHeaderView.sectionHeaderLabel.textColor=tintColorForSection[section]
+        sectionHeaderView.collapsed = collapsedForSection[section]
+        if collapsedForSection[section] {
+            sectionHeaderView.sectionCollapsableButton.setImage(sectionHeaderView.Down, for: .normal)
+        } else {
+            sectionHeaderView.sectionCollapsableButton.setImage(sectionHeaderView.Right, for: .normal)
+        }
+        sectionHeaderView.sectionNumber=section
+        sectionHeaderView.parent=self
+        return sectionHeaderView
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tasks.loaded) {
+            if collapsedForSection[section] {
+                return 0
+            }
             return tasks.sortedByStatus[section].tasks.count
         }
         tasks.load(projectId: project.id)
         while (!tasks.loaded) {
             sleep(1)
+        }
+        if collapsedForSection[section] {
+            return 0
         }
         return tasks.sortedByStatus[section].tasks.count
     }
@@ -109,12 +137,15 @@ class TasksTableController: UITableViewController {
     }
     */
 
-    /*
+
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+            let task=tasks.sortedByStatus[fromIndexPath.section].tasks[fromIndexPath.row]
+            task.status=tasks.sortedByStatus[to.section].key
+            tasks.sortTasksByStatus()
+            self.tableView.reloadData()
     }
-    */
+    
 
     /*
     // Override to support conditional rearranging of the table view.
