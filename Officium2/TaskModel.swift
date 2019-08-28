@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TaskModel : Decodable {
+class TaskModel : Encodable, Decodable {
     
     var id: String="sampleGU-IDsa-mple-GUID-sampleGUIDsa"
     var name: String="Task Name"

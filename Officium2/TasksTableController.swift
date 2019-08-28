@@ -34,8 +34,6 @@ class TasksTableController: UITableViewController {
         
         tasks.sortTasksByStatus()
         
-        self.tableView.isEditing = true
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -150,6 +148,7 @@ class TasksTableController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let task:TaskModel=tasks.sortedByStatus[fromIndexPath.section].tasks[fromIndexPath.row]
         task.status=tasks.sortedByStatus[to.section].key
+        tasks.updateTask(task: task)
         tasks.sortTasksByStatus()
         self.tableView.reloadData()
     }
