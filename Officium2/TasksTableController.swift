@@ -34,11 +34,13 @@ class TasksTableController: UITableViewController {
         
         tasks.sortTasksByStatus()
         
+        self.tableView.isEditing = true
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func setUpNavication() {
@@ -56,11 +58,6 @@ class TasksTableController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return self.tasks.sortedByStatus.count
     }
-    
-    /*override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = self.tasks.sortedByStatus[section]
-        return section.key
-    }*/
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -81,6 +78,9 @@ class TasksTableController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tasks.loaded) {
+            if section>=collapsedForSection.count || section<0 {
+                return 0
+            }
             if collapsedForSection[section] {
                 return 0
             }
@@ -116,6 +116,14 @@ class TasksTableController: UITableViewController {
         return UITableViewCell()
         
     }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -140,10 +148,10 @@ class TasksTableController: UITableViewController {
 
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-            let task=tasks.sortedByStatus[fromIndexPath.section].tasks[fromIndexPath.row]
-            task.status=tasks.sortedByStatus[to.section].key
-            tasks.sortTasksByStatus()
-            self.tableView.reloadData()
+        let task:TaskModel=tasks.sortedByStatus[fromIndexPath.section].tasks[fromIndexPath.row]
+        task.status=tasks.sortedByStatus[to.section].key
+        tasks.sortTasksByStatus()
+        self.tableView.reloadData()
     }
     
 

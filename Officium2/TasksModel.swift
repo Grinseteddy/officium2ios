@@ -51,6 +51,10 @@ class TasksModel {
         }
         let staticModel: StatusModel = StatusModel()
         
+        if sortedByStatus.count > 0 {
+            sortedByStatus.removeAll()
+        }
+        
         for status in staticModel.model {
             let model: StatusModel = StatusModel()
             for task in tasks {
