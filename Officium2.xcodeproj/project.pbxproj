@@ -25,6 +25,11 @@
 		9488F55E231541D800C40DD7 /* SingleTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F55D231541D800C40DD7 /* SingleTaskViewController.swift */; };
 		9488F560231560EE00C40DD7 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F55F231560EE00C40DD7 /* StatusModel.swift */; };
 		9488F56E23167B9B00C40DD7 /* TaskOverviewSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F56D23167B9B00C40DD7 /* TaskOverviewSectionHeaderView.swift */; };
+		9488F572231813BC00C40DD7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F571231813BC00C40DD7 /* UserModel.swift */; };
+		9488F591231D0A5500C40DD7 /* UserManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F590231D0A5500C40DD7 /* UserManagement.swift */; };
+		9488F593231D110700C40DD7 /* LinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F592231D110700C40DD7 /* LinkModel.swift */; };
+		9488F595231D122D00C40DD7 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F594231D122D00C40DD7 /* MessageModel.swift */; };
+		9488F597231D12B000C40DD7 /* UserMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488F596231D12B000C40DD7 /* UserMessageModel.swift */; };
 		94A2FB6E230E881100F43BAB /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6D230E881100F43BAB /* ProjectModel.swift */; };
 		94A2FB70230E885700F43BAB /* ProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB6F230E885700F43BAB /* ProjectsModel.swift */; };
 		94A2FB73230E88CD00F43BAB /* ApplicationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */; };
@@ -49,6 +54,19 @@
 			remoteInfo = Officium2;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9488F58F2318F8B200C40DD7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		945AFCD5230FE61500934B05 /* SingleTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTaskCell.swift; sourceTree = "<group>"; };
@@ -75,6 +93,11 @@
 		9488F55D231541D800C40DD7 /* SingleTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTaskViewController.swift; sourceTree = "<group>"; };
 		9488F55F231560EE00C40DD7 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		9488F56D23167B9B00C40DD7 /* TaskOverviewSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOverviewSectionHeaderView.swift; sourceTree = "<group>"; };
+		9488F571231813BC00C40DD7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9488F590231D0A5500C40DD7 /* UserManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagement.swift; sourceTree = "<group>"; };
+		9488F592231D110700C40DD7 /* LinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkModel.swift; sourceTree = "<group>"; };
+		9488F594231D122D00C40DD7 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		9488F596231D12B000C40DD7 /* UserMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageModel.swift; sourceTree = "<group>"; };
 		94A2FB6D230E881100F43BAB /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		94A2FB6F230E885700F43BAB /* ProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsModel.swift; sourceTree = "<group>"; };
 		94A2FB72230E88CD00F43BAB /* ApplicationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettings.swift; sourceTree = "<group>"; };
@@ -207,11 +230,16 @@
 		94A2FB6A230E841800F43BAB /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				9488F571231813BC00C40DD7 /* UserModel.swift */,
 				94A2FB6D230E881100F43BAB /* ProjectModel.swift */,
 				94A2FB6F230E885700F43BAB /* ProjectsModel.swift */,
 				94A2FB78230ECEA100F43BAB /* TaskModel.swift */,
 				94A2FB7A230ECED200F43BAB /* TasksModel.swift */,
 				9488F55F231560EE00C40DD7 /* StatusModel.swift */,
+				9488F590231D0A5500C40DD7 /* UserManagement.swift */,
+				9488F592231D110700C40DD7 /* LinkModel.swift */,
+				9488F594231D122D00C40DD7 /* MessageModel.swift */,
+				9488F596231D12B000C40DD7 /* UserMessageModel.swift */,
 			);
 			name = DataModels;
 			sourceTree = "<group>";
@@ -234,6 +262,7 @@
 				94885684230D7F6D00B61A48 /* Sources */,
 				94885685230D7F6D00B61A48 /* Frameworks */,
 				94885686230D7F6D00B61A48 /* Resources */,
+				9488F58F2318F8B200C40DD7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,18 +395,23 @@
 				9488F560231560EE00C40DD7 /* StatusModel.swift in Sources */,
 				9488568E230D7F6D00B61A48 /* ViewController.swift in Sources */,
 				9488F55123100A6100C40DD7 /* OfficiumUtilities.swift in Sources */,
+				9488F597231D12B000C40DD7 /* UserMessageModel.swift in Sources */,
 				94A2FB73230E88CD00F43BAB /* ApplicationSettings.swift in Sources */,
+				9488F593231D110700C40DD7 /* LinkModel.swift in Sources */,
 				9488F55E231541D800C40DD7 /* SingleTaskViewController.swift in Sources */,
 				94A2FB7B230ECED200F43BAB /* TasksModel.swift in Sources */,
 				948856BA230D84A100B61A48 /* LoginController.swift in Sources */,
 				94A2FB70230E885700F43BAB /* ProjectsModel.swift in Sources */,
+				9488F591231D0A5500C40DD7 /* UserManagement.swift in Sources */,
 				94A2FB79230ECEA100F43BAB /* TaskModel.swift in Sources */,
 				9488568C230D7F6D00B61A48 /* AppDelegate.swift in Sources */,
 				945AFCD7230FE61500934B05 /* SingleTaskCell.swift in Sources */,
 				9488F56E23167B9B00C40DD7 /* TaskOverviewSectionHeaderView.swift in Sources */,
 				9488F5582313F74100C40DD7 /* SingleProjectCell.swift in Sources */,
+				9488F595231D122D00C40DD7 /* MessageModel.swift in Sources */,
 				94A2FB75230EA8B900F43BAB /* TasksTableController.swift in Sources */,
 				948856BD230D8FFC00B61A48 /* ProjectsControllerTableViewController.swift in Sources */,
+				9488F572231813BC00C40DD7 /* UserModel.swift in Sources */,
 				94A2FB6E230E881100F43BAB /* ProjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +586,7 @@
 		948856B1230D7F7100B61A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RM6GM29997;
@@ -570,6 +605,7 @@
 		948856B2230D7F7100B61A48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RM6GM29997;

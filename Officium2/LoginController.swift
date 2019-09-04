@@ -10,12 +10,14 @@ import UIKit
 
 class LoginController: UIViewController {
 
+    var currentUser : UserManagement = UserManagement()
     
     @IBOutlet weak var UserNameInput: UITextField!
     
     @IBOutlet weak var PasswordInput: UITextField!
     
     @IBOutlet weak var LoginButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,12 @@ class LoginController: UIViewController {
     }
     
     
-
+    @IBAction func loginClick(_ sender: Any) {
+        
+        
+        
+    }
+    
 
     /*
     // MARK: - Navigation

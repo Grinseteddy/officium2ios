@@ -40,7 +40,7 @@ class ProjectsModel {
                         print(error)
                     }
                 }
-                } .resume()
+            } .resume()
         }
     }
     

@@ -28,6 +28,15 @@
 		<false/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>ec2-18-184-201-46.eu-central-1.compute.amazonaws.com</key>
+			<dict>
+				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 			<key>ec2-3-120-34-138.eu-central-1.compute.amazonaws.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
