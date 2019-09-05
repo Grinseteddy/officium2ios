@@ -196,7 +196,21 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwT-gJ-0pX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="55u-1r-W8B"/>
+                                    <navigationItem title="Title" id="55u-1r-W8B">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="4uI-Lz-7e3">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1db-sd-KFi">
+                                                <rect key="frame" x="20" y="7" width="122" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="etP-Ho-Bqv"/>
+                                                </constraints>
+                                                <state key="normal" title="Back To Overview"/>
+                                                <connections>
+                                                    <segue destination="iHW-TK-UFJ" kind="showDetail" identifier="showTasksAgain" id="Xl4-po-kHG"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-fg-A2w">
@@ -288,16 +302,6 @@
                                     <constraint firstAttribute="height" constant="60" id="Ijc-Zq-iBW"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1db-sd-KFi">
-                                <rect key="frame" x="272" y="852" width="122" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="etP-Ho-Bqv"/>
-                                </constraints>
-                                <state key="normal" title="Back To Overview"/>
-                                <connections>
-                                    <segue destination="iHW-TK-UFJ" kind="showDetail" identifier="showTasksAgain" id="Xl4-po-kHG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -320,7 +324,6 @@
                             <constraint firstItem="Tiu-HI-kZv" firstAttribute="trailing" secondItem="hwT-gJ-0pX" secondAttribute="trailing" id="V3U-nv-ASD"/>
                             <constraint firstItem="jb9-UG-nUw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j5g-wW-z95" secondAttribute="trailing" constant="8" symbolic="YES" id="Wga-4u-z7x"/>
                             <constraint firstItem="Tiu-HI-kZv" firstAttribute="trailing" secondItem="boa-4N-8l3" secondAttribute="trailing" constant="20" id="YNt-XZ-YIf"/>
-                            <constraint firstItem="Tiu-HI-kZv" firstAttribute="trailing" secondItem="1db-sd-KFi" secondAttribute="trailing" constant="20" id="ZhE-u7-C0W"/>
                             <constraint firstItem="ALS-c5-20H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tiu-HI-kZv" secondAttribute="leading" id="Zwa-AZ-pS4"/>
                             <constraint firstItem="bPs-Qj-08Y" firstAttribute="leading" secondItem="Tiu-HI-kZv" secondAttribute="leading" constant="20" id="bsp-HP-kmg"/>
                             <constraint firstItem="GTN-TD-xKP" firstAttribute="top" secondItem="4ob-5z-8Sp" secondAttribute="bottom" constant="9" id="ea1-9A-HAf"/>
@@ -329,8 +332,6 @@
                             <constraint firstItem="j5g-wW-z95" firstAttribute="top" secondItem="vyS-fg-A2w" secondAttribute="bottom" constant="26" id="tCQ-VP-eeb"/>
                             <constraint firstItem="boa-4N-8l3" firstAttribute="leading" secondItem="ALS-c5-20H" secondAttribute="trailing" constant="20" id="tWT-8W-SB8"/>
                             <constraint firstItem="GTN-TD-xKP" firstAttribute="leading" secondItem="I8e-5k-gFv" secondAttribute="trailing" constant="22" id="uA3-KU-mwL"/>
-                            <constraint firstItem="1db-sd-KFi" firstAttribute="bottom" secondItem="Tiu-HI-kZv" secondAttribute="bottom" constant="20" id="vlA-XE-UVN"/>
-                            <constraint firstItem="1db-sd-KFi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tiu-HI-kZv" secondAttribute="leading" symbolic="YES" id="wew-nE-rtm"/>
                             <constraint firstItem="vyS-fg-A2w" firstAttribute="top" secondItem="boa-4N-8l3" secondAttribute="bottom" constant="28" id="xQ6-4x-7Xn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tiu-HI-kZv"/>

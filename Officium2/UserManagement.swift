@@ -15,9 +15,57 @@ class UserManagement {
     var currentUser = UserMessageModel()
     var loaded = false
     var error = false
+    var assigneeloaded=false
+    var assignee: UserMessageModel = UserMessageModel()
+    var updatedByLoaded = false
+    var updatedBy: UserMessageModel = UserMessageModel()
     
     init() {
         
+    }
+    
+    func getUserById(assigneeId: String) {
+        
+        if self.assigneeloaded {
+            return
+        }
+        if let url = URL(string: ApplicationSettings.userManagement+assigneeId) {
+            URLSession.shared.dataTask(with: url) {data,response,error in
+                if let data = data {
+                    do {
+                        //TODO Handle errors accordingly
+                        
+                        self.assignee = try JSONDecoder().decode(UserMessageModel.self, from: data)
+                        print(self.assignee.user?.name as Any)
+                        self.assigneeloaded=true;
+                    } catch let error {
+                        print(error)
+                    }
+                }
+            } .resume()
+        }
+    }
+    
+    func getUpdatedById(updatedById: String) {
+        
+        if self.updatedByLoaded {
+            return
+        }
+        if let url = URL(string: ApplicationSettings.userManagement+updatedById) {
+            URLSession.shared.dataTask(with: url) {data,response,error in
+                if let data = data {
+                    do {
+                        //TODO Handle errors accordingly
+                        
+                        self.updatedBy = try JSONDecoder().decode(UserMessageModel.self, from: data)
+                        print(self.updatedBy.user?.name as Any)
+                        self.updatedByLoaded=true;
+                    } catch let error {
+                        print(error)
+                    }
+                }
+                } .resume()
+        }
     }
     
     func getUserByName(name: String) {

@@ -21,6 +21,9 @@ class ApplicationSettings {
     static let login:
         String="http://officium.annegret.info:5051/login/"
     
+    static let userManagement:
+        String="http://officium.annegret.info:5050/user/"
+    
     
     static let shared: ApplicationSettings=ApplicationSettings()
     

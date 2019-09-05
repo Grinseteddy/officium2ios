@@ -12,6 +12,8 @@ class SingleTaskViewController: UIViewController {
 
     var task: TaskModel=TaskModel()
     var project: ProjectModel=ProjectModel()
+    var assignee: UserManagement=UserManagement()
+    var updatedBy: UserManagement=UserManagement()
     
     @IBOutlet weak var statusLabel: UILabel!
     
@@ -43,13 +45,35 @@ class SingleTaskViewController: UIViewController {
         if (statusLabel == nil || dueDateLabel == nil || taskNameLabel == nil || assigneeLabel == nil || assigneeLabel == nil || labelLastUpdateBy == nil || labelLastUpdate == nil ) {
             return
         }
+        getAssigneeById()
+        getUpdatedById()
         self.statusLabel.text=self.task.status
         self.dueDateLabel.text=self.task.duedate!
         self.taskNameLabel.text=self.task.name
-        self.assigneeLabel.text=self.task.assignee
+        self.assigneeLabel.text=self.assignee.assignee.user!.surname + " " + self.assignee.assignee.user!.name
         self.labelLastUpdate.text=self.task.updatedAt
-        self.labelLastUpdateBy.text=self.task.updatedBy
+        self.labelLastUpdateBy.text=self.updatedBy.updatedBy.user!.surname + " " + self.updatedBy.updatedBy.user!.name
         self.singleTaskTitle.title=self.task.name
+    }
+    
+    func getAssigneeById() {
+        if (assignee.assigneeloaded) {
+            return
+        }
+        assignee.getUserById(assigneeId: self.task.assignee)
+        while (!assignee.assigneeloaded) {
+            sleep(1)
+        }
+    }
+    
+    func getUpdatedById() {
+        if (updatedBy.updatedByLoaded) {
+            return
+        }
+        updatedBy.getUpdatedById(updatedById: self.task.updatedBy)
+        while (!updatedBy.updatedByLoaded) {
+            sleep(1)
+        }
     }
     
 
