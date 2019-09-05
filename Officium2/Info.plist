@@ -28,16 +28,27 @@
 		<false/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>New item</key>
+			<string></string>
 			<key>ec2-18-184-201-46.eu-central-1.compute.amazonaws.com</key>
 			<dict>
-				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
-				<false/>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+				<false/>
 			</dict>
 			<key>ec2-3-120-34-138.eu-central-1.compute.amazonaws.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>officium.annegret.info</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
